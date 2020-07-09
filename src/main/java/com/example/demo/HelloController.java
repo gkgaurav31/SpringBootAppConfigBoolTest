@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
+	
     private final MessageProperties properties;
 
     public HelloController(MessageProperties properties) {
@@ -16,8 +17,14 @@ public class HelloController {
         return "Message: " + properties.getMessage();
     }
     
-    @GetMapping("/test")
-    public boolean getBoolMessage() {
-    	return properties.isMyboolean();
+    @GetMapping("/bool1")
+    public String getBoolMessage2() {
+    	return "isEnable: " +  properties.isEnable();
     }
+    
+    @GetMapping("/bool2")
+    public String getBoolMessage3() {
+    	return "isenabletest " +  properties.isIsenabletest();
+    }
+    
 }
