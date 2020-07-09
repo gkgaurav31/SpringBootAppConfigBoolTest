@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "config")
 public class MessageProperties {
     private String message;
-    private Boolean myboolean;
+    private boolean myboolean;
 
     public String getMessage() {
         return message;
@@ -15,11 +15,11 @@ public class MessageProperties {
         this.message = message;
     }
 
-	public Boolean getMyboolean() {
+	public boolean isMyboolean() {
 		return myboolean;
 	}
 
-	public void setMyboolean(Boolean myboolean) {
+	public void setMyboolean(boolean myboolean) {
 		this.myboolean = myboolean;
 	}
 

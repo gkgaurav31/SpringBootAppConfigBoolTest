@@ -17,7 +17,7 @@ public class HelloController {
     }
     
     @GetMapping("/test")
-    public Boolean getBoolMessage() {
-    	return properties.getMyboolean();
+    public boolean getBoolMessage() {
+    	return properties.isMyboolean();
     }
 }
